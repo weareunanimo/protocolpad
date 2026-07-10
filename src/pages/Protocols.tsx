@@ -26,14 +26,14 @@ export default function Protocols() {
 
   return (
     <div className="space-y-6 max-w-6xl">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h1 className="text-2xl font-display text-foreground">Protocolos</h1>
           <p className="text-sm text-muted-foreground mt-1">Protocolos de tratamento de todos os clientes</p>
         </div>
         <Link
-          to="/protocols/new"
-          className="flex items-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+          to="/app/protocols/new"
+          className="flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity w-full sm:w-auto"
         >
           <Plus className="w-4 h-4" />
           Novo Protocolo
@@ -63,7 +63,7 @@ export default function Protocols() {
           return (
             <Link
               key={p.id}
-              to={`/protocols/${p.id}`}
+              to={`/app/protocols/${p.id}`}
               className="flex items-center justify-between p-5 bg-card rounded-xl border border-border shadow-card hover:shadow-elevated transition-shadow animate-fade-in group"
             >
               <div className="min-w-0 flex-1">

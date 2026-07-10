@@ -67,7 +67,7 @@ export default function Dashboard() {
         <div className="lg:col-span-2 bg-card rounded-xl border border-border shadow-card animate-fade-in">
           <div className="flex items-center justify-between p-5 border-b border-border">
             <h2 className="font-display text-lg text-card-foreground">Protocolos Recentes</h2>
-            <Link to="/protocols" className="text-xs text-accent hover:underline flex items-center gap-1">
+            <Link to="/app/protocols" className="text-xs text-accent hover:underline flex items-center gap-1">
               Ver todos <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
@@ -113,7 +113,7 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Link
-          to="/protocols"
+          to="/app/protocols"
           className="flex items-center gap-4 p-5 bg-card rounded-xl border border-border shadow-card hover:shadow-elevated transition-shadow group"
         >
           <div className="p-3 rounded-lg bg-accent/10 group-hover:bg-accent/20 transition-colors">
@@ -125,7 +125,7 @@ export default function Dashboard() {
           </div>
         </Link>
         <Link
-          to="/clients"
+          to="/app/clients"
           className="flex items-center gap-4 p-5 bg-card rounded-xl border border-border shadow-card hover:shadow-elevated transition-shadow group"
         >
           <div className="p-3 rounded-lg bg-accent/10 group-hover:bg-accent/20 transition-colors">
@@ -137,7 +137,7 @@ export default function Dashboard() {
           </div>
         </Link>
         <Link
-          to="/templates"
+          to="/app/templates"
           className="flex items-center gap-4 p-5 bg-card rounded-xl border border-border shadow-card hover:shadow-elevated transition-shadow group"
         >
           <div className="p-3 rounded-lg bg-accent/10 group-hover:bg-accent/20 transition-colors">

@@ -63,13 +63,13 @@ export default function ProtocolBuilder() {
 
   return (
     <div className="space-y-6 max-w-4xl">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Link to="/protocols" className="p-2 rounded-lg hover:bg-muted transition-colors">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div className="flex items-start gap-3 min-w-0">
+          <Link to="/app/protocols" className="p-2 rounded-lg hover:bg-muted transition-colors shrink-0">
             <ArrowLeft className="w-4 h-4 text-muted-foreground" />
           </Link>
-          <div>
-            <h1 className="text-2xl font-display text-foreground">
+          <div className="min-w-0">
+            <h1 className="text-xl sm:text-2xl font-display text-foreground">
               {isNew ? "Novo Protocolo" : "Protocolo de Restauração Tireoidiana + Intestinal"}
             </h1>
             <p className="text-sm text-muted-foreground mt-0.5">
@@ -77,14 +77,15 @@ export default function ProtocolBuilder() {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <button className="flex items-center gap-2 px-3 py-2 border border-border rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">
+        <div className="flex items-center gap-2 shrink-0">
+          <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-3 py-2 border border-border rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">
             <Download className="w-4 h-4" />
-            Exportar PDF
+            <span className="hidden sm:inline">Exportar PDF</span>
+            <span className="sm:hidden">PDF</span>
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+          <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
             <Save className="w-4 h-4" />
-            Salvar Protocolo
+            Salvar
           </button>
         </div>
       </div>
@@ -93,12 +94,12 @@ export default function ProtocolBuilder() {
         context="Este protocolo é uma sugestão baseada em evidência para apoiar a decisão do profissional licenciado. Revise cada item frente ao quadro clínico completo, contraindicações e interações antes de compartilhar com o cliente."
       />
 
-      <div className="flex items-center gap-1 bg-muted/50 p-1 rounded-lg w-fit">
+      <div className="flex items-center gap-1 bg-muted/50 p-1 rounded-lg w-full sm:w-fit overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap shrink-0 ${
               activeTab === tab.key
                 ? "bg-card text-card-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground"

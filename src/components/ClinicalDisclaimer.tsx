@@ -5,6 +5,9 @@ interface ClinicalDisclaimerProps {
   context?: string;
 }
 
+const DEFAULT_CONTEXT =
+  "As informações apresentadas apoiam o raciocínio clínico do profissional licenciado e devem ser avaliadas frente ao quadro completo do cliente, dentro do seu escopo de atuação.";
+
 export default function ClinicalDisclaimer({
   variant = "default",
   context,
@@ -14,8 +17,8 @@ export default function ClinicalDisclaimer({
       <div className="flex items-start gap-2 text-[11px] text-muted-foreground leading-relaxed">
         <ShieldAlert className="w-3.5 h-3.5 shrink-0 mt-0.5 text-accent" />
         <p>
-          <span className="font-semibold text-foreground">Apenas apoio à decisão.</span>{" "}
-          As saídas apoiam o julgamento clínico do profissional licenciado e não constituem aconselhamento médico, diagnóstico, tratamento ou prescrição.
+          <span className="font-semibold text-foreground">Apoio à decisão clínica.</span>{" "}
+          Não diagnostica, não trata e não prescreve. Uso restrito a profissionais licenciados, dentro do seu escopo de atuação.
         </p>
       </div>
     );
@@ -26,12 +29,10 @@ export default function ClinicalDisclaimer({
       <ShieldAlert className="w-4 h-4 text-accent shrink-0 mt-0.5" />
       <div className="space-y-1">
         <p className="text-xs font-semibold text-foreground">
-          Ferramenta de Apoio à Decisão Clínica — Uso Profissional
+          Ferramenta de apoio à decisão clínica — uso profissional
         </p>
         <p className="text-xs text-muted-foreground leading-relaxed">
-          {context ??
-            "O Protocol Pad apresenta sugestões baseadas em evidência para apoiar seu raciocínio clínico. Não diagnostica, trata, prescreve nem substitui o julgamento do profissional."}{" "}
-          Todas as saídas devem ser avaliadas frente ao quadro clínico completo e aplicadas dentro do seu escopo de atuação.
+          {context ?? DEFAULT_CONTEXT} O Protocol Pad não diagnostica, não trata, não prescreve e não substitui o julgamento do profissional.
         </p>
       </div>
     </div>

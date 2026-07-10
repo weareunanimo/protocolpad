@@ -18,14 +18,14 @@ const integrationMeta: Record<
   fullscript: {
     name: "Fullscript",
     description:
-      "Send supplement recommendations directly to your Fullscript dispensary for client ordering and adherence tracking.",
+      "Envie recomendações de suplementos diretamente para o seu dispensário Fullscript para pedidos dos clientes e acompanhamento de adesão.",
     url: "https://fullscript.com",
     brandInitials: "FS",
   },
   emerson: {
     name: "Emerson Ecologics",
     description:
-      "Push protocols to Wellevate / Emerson Ecologics for professional-grade supplement fulfillment.",
+      "Envie protocolos para o Wellevate / Emerson Ecologics para dispensação de suplementos de grau profissional.",
     url: "https://emersonecologics.com",
     brandInitials: "EE",
   },
@@ -33,20 +33,20 @@ const integrationMeta: Record<
 
 export default function Settings() {
   const [profile, setProfile] = useState({
-    name: "Dr. Danielle Reyes",
-    credentials: "ND, IFMCP",
-    email: "danielle@northpineclinic.com",
-    practice: "North Pine Functional Health",
-    licenseState: "OR",
-    licenseNumber: "ND-104-882",
+    name: "Dra. Daniela Reyes",
+    credentials: "Nutricionista, CRN-3 12345",
+    email: "daniela@clinicanortpine.com.br",
+    practice: "Clínica North Pine de Saúde Funcional",
+    licenseState: "SP",
+    licenseNumber: "CRN-3 12345",
     scope:
-      "Naturopathic primary care with a focus on thyroid, GI, and metabolic health.",
+      "Atendimento em saúde funcional com foco em tireoide, saúde intestinal e metabolismo.",
   });
 
   const [integrations, setIntegrations] = useState<Record<Integration, IntegrationState>>({
     fullscript: {
       connected: true,
-      accountEmail: "danielle@northpineclinic.com",
+      accountEmail: "daniela@clinicanortpine.com.br",
       dispensaryId: "np-clinic-2451",
       defaultMarkup: "15",
     },
@@ -92,21 +92,21 @@ export default function Settings() {
   return (
     <div className="space-y-8 max-w-4xl">
       <div>
-        <h1 className="text-2xl font-display text-foreground">Settings</h1>
+        <h1 className="text-2xl font-display text-foreground">Configurações</h1>
         <p className="text-sm text-muted-foreground mt-1">
-          Practitioner profile, integrations, and clinical preferences
+          Perfil profissional, integrações e preferências clínicas
         </p>
       </div>
 
       <ClinicalDisclaimer variant="compact" />
 
-      {/* Practitioner profile */}
+      {/* Perfil */}
       <section className="bg-card rounded-xl border border-border shadow-card">
         <div className="flex items-center justify-between px-5 py-4 border-b border-border">
           <div>
-            <h2 className="font-display text-lg text-card-foreground">Practitioner profile</h2>
+            <h2 className="font-display text-lg text-card-foreground">Perfil profissional</h2>
             <p className="text-xs text-muted-foreground mt-0.5">
-              Appears on generated protocols and client-facing exports
+              Aparece nos protocolos gerados e nas exportações para o cliente
             </p>
           </div>
           <button
@@ -114,45 +114,20 @@ export default function Settings() {
             className="flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
             {saved === "profile" ? <Check className="w-4 h-4" /> : <Save className="w-4 h-4" />}
-            {saved === "profile" ? "Saved" : "Save"}
+            {saved === "profile" ? "Salvo" : "Salvar"}
           </button>
         </div>
 
         <div className="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Field
-            label="Full name"
-            value={profile.name}
-            onChange={(v) => setProfile({ ...profile, name: v })}
-          />
-          <Field
-            label="Credentials"
-            value={profile.credentials}
-            onChange={(v) => setProfile({ ...profile, credentials: v })}
-          />
-          <Field
-            label="Email"
-            type="email"
-            value={profile.email}
-            onChange={(v) => setProfile({ ...profile, email: v })}
-          />
-          <Field
-            label="Practice name"
-            value={profile.practice}
-            onChange={(v) => setProfile({ ...profile, practice: v })}
-          />
-          <Field
-            label="License state"
-            value={profile.licenseState}
-            onChange={(v) => setProfile({ ...profile, licenseState: v })}
-          />
-          <Field
-            label="License number"
-            value={profile.licenseNumber}
-            onChange={(v) => setProfile({ ...profile, licenseNumber: v })}
-          />
+          <Field label="Nome completo" value={profile.name} onChange={(v) => setProfile({ ...profile, name: v })} />
+          <Field label="Credenciais" value={profile.credentials} onChange={(v) => setProfile({ ...profile, credentials: v })} />
+          <Field label="E-mail" type="email" value={profile.email} onChange={(v) => setProfile({ ...profile, email: v })} />
+          <Field label="Nome da clínica" value={profile.practice} onChange={(v) => setProfile({ ...profile, practice: v })} />
+          <Field label="Estado do registro" value={profile.licenseState} onChange={(v) => setProfile({ ...profile, licenseState: v })} />
+          <Field label="Número do registro" value={profile.licenseNumber} onChange={(v) => setProfile({ ...profile, licenseNumber: v })} />
           <div className="sm:col-span-2">
             <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">
-              Scope of practice
+              Escopo de atuação
             </label>
             <textarea
               value={profile.scope}
@@ -162,25 +137,25 @@ export default function Settings() {
             />
             <p className="text-[11px] text-muted-foreground mt-1.5 flex items-center gap-1.5">
               <ShieldCheck className="w-3 h-3 text-accent" />
-              Used to constrain protocol recommendations to your licensed scope.
+              Usado para restringir as recomendações do protocolo ao seu escopo profissional.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Integrations */}
+      {/* Integrações */}
       <section className="bg-card rounded-xl border border-border shadow-card">
         <div className="flex items-center justify-between px-5 py-4 border-b border-border">
           <div>
-            <h2 className="font-display text-lg text-card-foreground">Supplement dispensary</h2>
+            <h2 className="font-display text-lg text-card-foreground">Dispensário de suplementos</h2>
             <p className="text-xs text-muted-foreground mt-0.5">
-              Connect a dispensary to send protocols directly for client ordering
+              Conecte um dispensário para enviar os protocolos direto para pedido do cliente
             </p>
           </div>
           {saved === "integrations" && (
             <span className="flex items-center gap-1.5 text-xs text-success font-medium">
               <Check className="w-3.5 h-3.5" />
-              Saved
+              Salvo
             </span>
           )}
         </div>
@@ -198,16 +173,14 @@ export default function Settings() {
                     </div>
                     <div className="min-w-0">
                       <div className="flex items-center gap-2">
-                        <h3 className="text-sm font-semibold text-card-foreground">
-                          {meta.name}
-                        </h3>
+                        <h3 className="text-sm font-semibold text-card-foreground">{meta.name}</h3>
                         {state.connected ? (
                           <span className="text-[11px] px-2 py-0.5 rounded-full font-medium bg-success/10 text-success">
-                            Connected
+                            Conectado
                           </span>
                         ) : (
                           <span className="text-[11px] px-2 py-0.5 rounded-full font-medium bg-muted text-muted-foreground">
-                            Not connected
+                            Não conectado
                           </span>
                         )}
                       </div>
@@ -218,7 +191,7 @@ export default function Settings() {
                         rel="noreferrer"
                         className="inline-flex items-center gap-1 text-[11px] text-accent mt-1.5 hover:underline"
                       >
-                        Open {meta.name} <ExternalLink className="w-3 h-3" />
+                        Abrir {meta.name} <ExternalLink className="w-3 h-3" />
                       </a>
                     </div>
                   </div>
@@ -233,24 +206,24 @@ export default function Settings() {
                         : "border-accent bg-accent text-accent-foreground hover:opacity-90"
                     }`}
                   >
-                    {state.connected ? "Disconnect" : "Connect"}
+                    {state.connected ? "Desconectar" : "Conectar"}
                   </button>
                 </div>
 
                 {state.connected && (
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-13">
                     <Field
-                      label="Account email"
+                      label="E-mail da conta"
                       value={state.accountEmail}
                       onChange={(v) => updateIntegration(key, "accountEmail", v)}
                     />
                     <Field
-                      label="Dispensary ID"
+                      label="ID do dispensário"
                       value={state.dispensaryId}
                       onChange={(v) => updateIntegration(key, "dispensaryId", v)}
                     />
                     <Field
-                      label="Default markup (%)"
+                      label="Margem padrão (%)"
                       value={state.defaultMarkup}
                       onChange={(v) => updateIntegration(key, "defaultMarkup", v)}
                     />
@@ -262,13 +235,13 @@ export default function Settings() {
         </div>
       </section>
 
-      {/* Clinical preferences */}
+      {/* Preferências clínicas */}
       <section className="bg-card rounded-xl border border-border shadow-card">
         <div className="flex items-center justify-between px-5 py-4 border-b border-border">
           <div>
-            <h2 className="font-display text-lg text-card-foreground">Clinical preferences</h2>
+            <h2 className="font-display text-lg text-card-foreground">Preferências clínicas</h2>
             <p className="text-xs text-muted-foreground mt-0.5">
-              Defaults applied to new protocols
+              Padrões aplicados a novos protocolos
             </p>
           </div>
           <button
@@ -276,26 +249,26 @@ export default function Settings() {
             className="flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
             {saved === "prefs" ? <Check className="w-4 h-4" /> : <Save className="w-4 h-4" />}
-            {saved === "prefs" ? "Saved" : "Save"}
+            {saved === "prefs" ? "Salvo" : "Salvar"}
           </button>
         </div>
 
         <div className="p-5 space-y-4">
           <Toggle
-            label="Include clinical disclaimer on exported PDFs"
-            description="Reinforces the decision-support nature of the tool on every client-facing document."
+            label="Incluir aviso clínico nos PDFs exportados"
+            description="Reforça o caráter de apoio à decisão em todos os documentos entregues ao cliente."
             checked={prefs.includeDisclaimerOnPdf}
             onChange={(v) => setPrefs({ ...prefs, includeDisclaimerOnPdf: v })}
           />
           <Toggle
-            label="Require practitioner review before sending to dispensary"
-            description="Recommended. Prevents un-reviewed protocol suggestions from reaching clients."
+            label="Exigir revisão do profissional antes de enviar ao dispensário"
+            description="Recomendado. Evita que sugestões não revisadas cheguem aos clientes."
             checked={prefs.requireReviewBeforeSend}
             onChange={(v) => setPrefs({ ...prefs, requireReviewBeforeSend: v })}
           />
           <div>
             <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">
-              Default protocol duration (weeks)
+              Duração padrão do protocolo (semanas)
             </label>
             <input
               type="number"

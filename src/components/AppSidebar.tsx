@@ -12,12 +12,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard", path: "/" },
-  { icon: Users, label: "Clients", path: "/clients" },
-  { icon: FileText, label: "Protocols", path: "/protocols" },
-  { icon: FlaskConical, label: "Lab Templates", path: "/templates" },
+  { icon: LayoutDashboard, label: "Painel", path: "/" },
+  { icon: Users, label: "Clientes", path: "/clients" },
+  { icon: FileText, label: "Protocolos", path: "/protocols" },
+  { icon: FlaskConical, label: "Modelos de Exames", path: "/templates" },
   { icon: BarChart3, label: "Insights", path: "/insights" },
-  { icon: Settings, label: "Settings", path: "/settings" },
+  { icon: Settings, label: "Configurações", path: "/settings" },
 ];
 
 export default function AppSidebar() {

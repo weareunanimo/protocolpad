@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Clients from "./pages/Clients";
 import Protocols from "./pages/Protocols";
 import ProtocolBuilder from "./pages/ProtocolBuilder";
+import Placeholder from "./pages/Placeholder";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,9 @@ const App = () => (
             <Route path="/clients" element={<Clients />} />
             <Route path="/protocols" element={<Protocols />} />
             <Route path="/protocols/:id" element={<ProtocolBuilder />} />
+            <Route path="/templates" element={<Placeholder title="Lab Templates" description="Evidence-based lab panels and interpretive frameworks" />} />
+            <Route path="/insights" element={<Placeholder title="Insights" description="Clinical outcomes analytics across your practice" />} />
+            <Route path="/settings" element={<Placeholder title="Settings" description="Practice preferences, integrations, and account" />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

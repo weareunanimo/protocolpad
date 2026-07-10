@@ -13,7 +13,7 @@ export default function DashboardLayout() {
             <Search className="w-4 h-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search clients, protocols…"
+              placeholder="Buscar clientes, protocolos…"
               className="bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none w-full"
             />
           </div>

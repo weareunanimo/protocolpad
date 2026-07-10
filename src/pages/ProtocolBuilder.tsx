@@ -12,34 +12,34 @@ interface Supplement {
 }
 
 const initialSupplements: Supplement[] = [
-  { id: 1, name: "Selenium (Selenomethionine)", dosage: "200 mcg", timing: "Morning, with food", notes: "Essential for T4→T3 conversion" },
-  { id: 2, name: "Zinc Picolinate", dosage: "30 mg", timing: "Evening, with food", notes: "Supports thyroid hormone synthesis" },
-  { id: 3, name: "Saccharomyces Boulardii", dosage: "5B CFU", timing: "Twice daily, between meals", notes: "GI restoration, biofilm disruption" },
-  { id: 4, name: "L-Glutamine", dosage: "5g powder", timing: "Morning, empty stomach", notes: "Intestinal permeability support" },
-  { id: 5, name: "Vitamin D3 + K2", dosage: "5000 IU / 100 mcg", timing: "Morning, with fat", notes: "Immune modulation, absorption cofactor" },
+  { id: 1, name: "Selênio (Selenometionina)", dosage: "200 mcg", timing: "Manhã, com alimento", notes: "Essencial para a conversão T4→T3" },
+  { id: 2, name: "Zinco Picolinato", dosage: "30 mg", timing: "Noite, com alimento", notes: "Apoia a síntese de hormônios tireoidianos" },
+  { id: 3, name: "Saccharomyces Boulardii", dosage: "5 bi UFC", timing: "2x ao dia, entre refeições", notes: "Restauração GI, ruptura de biofilme" },
+  { id: 4, name: "L-Glutamina", dosage: "5 g em pó", timing: "Manhã, em jejum", notes: "Suporte à permeabilidade intestinal" },
+  { id: 5, name: "Vitamina D3 + K2", dosage: "5000 UI / 100 mcg", timing: "Manhã, com gordura", notes: "Modulação imune, cofator de absorção" },
 ];
 
 const dietRecommendations = [
-  "Eliminate gluten & dairy for 8 weeks (autoimmune connection)",
-  "Emphasize anti-inflammatory fats: wild salmon, sardines, olive oil",
-  "Include selenium-rich foods: Brazil nuts (2-3/day), pastured eggs",
-  "Bone broth 1 cup daily for gut lining repair",
-  "Remove refined sugar and seed oils",
+  "Eliminar glúten e laticínios por 8 semanas (conexão autoimune)",
+  "Priorizar gorduras anti-inflamatórias: salmão selvagem, sardinha, azeite",
+  "Incluir alimentos ricos em selênio: castanha-do-pará (2-3/dia), ovos caipiras",
+  "Caldo de ossos: 1 xícara por dia para reparo da mucosa intestinal",
+  "Remover açúcar refinado e óleos de sementes",
 ];
 
 const lifestyleInterventions = [
-  "Morning sunlight exposure: 10-15 min within first hour of waking",
-  "Sleep hygiene: consistent 10pm bedtime, blue light blocking after sunset",
-  "Moderate exercise only: walking, yoga, light resistance (no HIIT during recovery)",
-  "Stress management: 10 min daily breathwork (4-7-8 pattern)",
-  "Cold exposure: 30-second cold finish to showers (thyroid activation)",
+  "Exposição à luz solar matinal: 10-15 min na primeira hora ao acordar",
+  "Higiene do sono: dormir consistentemente às 22h, bloquear luz azul após o pôr do sol",
+  "Exercícios moderados: caminhada, ioga, resistência leve (sem HIIT durante recuperação)",
+  "Manejo de estresse: 10 min diários de respiração (padrão 4-7-8)",
+  "Exposição ao frio: finalizar banho com 30s de água fria (ativação tireoidiana)",
 ];
 
 const testingSchedule = [
-  { test: "Comprehensive Thyroid Panel (TSH, Free T3, Free T4, RT3, TPO, TG Ab)", timing: "Week 8" },
-  { test: "GI-MAP Stool Analysis", timing: "Week 12" },
-  { test: "Vitamin D, 25-OH", timing: "Week 8" },
-  { test: "Comprehensive Metabolic Panel + Iron Panel", timing: "Week 8" },
+  { test: "Painel Tireoidiano Completo (TSH, T3 Livre, T4 Livre, T3 Reverso, Anti-TPO, Anti-TG)", timing: "Semana 8" },
+  { test: "Análise de Fezes GI-MAP", timing: "Semana 12" },
+  { test: "Vitamina D, 25-OH", timing: "Semana 8" },
+  { test: "Painel Metabólico Completo + Perfil de Ferro", timing: "Semana 8" },
 ];
 
 type Tab = "supplements" | "diet" | "lifestyle" | "testing";
@@ -51,10 +51,10 @@ export default function ProtocolBuilder() {
   const [supplements, setSupplements] = useState(initialSupplements);
 
   const tabs: { key: Tab; label: string; icon: typeof Pill }[] = [
-    { key: "supplements", label: "Supplement Stack", icon: Pill },
-    { key: "diet", label: "Diet", icon: Utensils },
-    { key: "lifestyle", label: "Lifestyle", icon: Activity },
-    { key: "testing", label: "Follow-Up Testing", icon: FlaskConical },
+    { key: "supplements", label: "Suplementação", icon: Pill },
+    { key: "diet", label: "Dieta", icon: Utensils },
+    { key: "lifestyle", label: "Estilo de Vida", icon: Activity },
+    { key: "testing", label: "Retestes", icon: FlaskConical },
   ];
 
   const removeSupplement = (sid: number) => {
@@ -63,7 +63,6 @@ export default function ProtocolBuilder() {
 
   return (
     <div className="space-y-6 max-w-4xl">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Link to="/protocols" className="p-2 rounded-lg hover:bg-muted transition-colors">
@@ -71,31 +70,29 @@ export default function ProtocolBuilder() {
           </Link>
           <div>
             <h1 className="text-2xl font-display text-foreground">
-              {isNew ? "New Protocol" : "Thyroid + GI Restoration Protocol"}
+              {isNew ? "Novo Protocolo" : "Protocolo de Restauração Tireoidiana + Intestinal"}
             </h1>
             <p className="text-sm text-muted-foreground mt-0.5">
-              {isNew ? "Configure a new treatment protocol" : "Sarah Mitchell · 12 weeks · Started Feb 10, 2026"}
+              {isNew ? "Configure um novo protocolo de tratamento" : "Sara Mitchell · 12 semanas · Iniciado em 10 fev 2026"}
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <button className="flex items-center gap-2 px-3 py-2 border border-border rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">
             <Download className="w-4 h-4" />
-            Export PDF
+            Exportar PDF
           </button>
           <button className="flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
             <Save className="w-4 h-4" />
-            Save Protocol
+            Salvar Protocolo
           </button>
         </div>
       </div>
 
-      {/* Disclaimer */}
       <ClinicalDisclaimer
-        context="This protocol is generated to assist practitioner decision-making. It does not diagnose, treat, or prescribe."
+        context="Este protocolo é gerado para apoiar a decisão do profissional. Não diagnostica, trata nem prescreve."
       />
 
-      {/* Tabs */}
       <div className="flex items-center gap-1 bg-muted/50 p-1 rounded-lg w-fit">
         {tabs.map((tab) => (
           <button
@@ -113,7 +110,6 @@ export default function ProtocolBuilder() {
         ))}
       </div>
 
-      {/* Tab Content */}
       <div className="animate-fade-in">
         {activeTab === "supplements" && (
           <div className="space-y-3">
@@ -122,19 +118,19 @@ export default function ProtocolBuilder() {
                 <GripVertical className="w-4 h-4 text-muted-foreground/40 mt-1 cursor-grab shrink-0" />
                 <div className="flex-1 grid grid-cols-1 sm:grid-cols-4 gap-3">
                   <div className="sm:col-span-2">
-                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Supplement</label>
+                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Suplemento</label>
                     <p className="text-sm font-medium text-card-foreground mt-0.5">{s.name}</p>
                   </div>
                   <div>
-                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Dosage</label>
+                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Dose</label>
                     <p className="text-sm text-card-foreground mt-0.5">{s.dosage}</p>
                   </div>
                   <div>
-                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Timing</label>
+                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Horário</label>
                     <p className="text-sm text-card-foreground mt-0.5">{s.timing}</p>
                   </div>
                   <div className="sm:col-span-4">
-                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Clinical Notes</label>
+                    <label className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Notas Clínicas</label>
                     <p className="text-xs text-muted-foreground mt-0.5">{s.notes}</p>
                   </div>
                 </div>
@@ -148,14 +144,14 @@ export default function ProtocolBuilder() {
             ))}
             <button className="flex items-center gap-2 px-4 py-3 border border-dashed border-border rounded-xl text-sm text-muted-foreground hover:text-foreground hover:border-accent transition-colors w-full justify-center">
               <Plus className="w-4 h-4" />
-              Add Supplement
+              Adicionar Suplemento
             </button>
           </div>
         )}
 
         {activeTab === "diet" && (
           <div className="bg-card rounded-xl border border-border shadow-card p-5 space-y-3">
-            <h3 className="font-display text-lg text-card-foreground">Dietary Recommendations</h3>
+            <h3 className="font-display text-lg text-card-foreground">Recomendações Alimentares</h3>
             <ul className="space-y-2.5">
               {dietRecommendations.map((rec, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-card-foreground">
@@ -171,7 +167,7 @@ export default function ProtocolBuilder() {
 
         {activeTab === "lifestyle" && (
           <div className="bg-card rounded-xl border border-border shadow-card p-5 space-y-3">
-            <h3 className="font-display text-lg text-card-foreground">Lifestyle Interventions</h3>
+            <h3 className="font-display text-lg text-card-foreground">Intervenções de Estilo de Vida</h3>
             <ul className="space-y-2.5">
               {lifestyleInterventions.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-card-foreground">
@@ -186,8 +182,8 @@ export default function ProtocolBuilder() {
         {activeTab === "testing" && (
           <div className="bg-card rounded-xl border border-border shadow-card overflow-hidden">
             <div className="p-5 border-b border-border">
-              <h3 className="font-display text-lg text-card-foreground">Follow-Up Testing Schedule</h3>
-              <p className="text-xs text-muted-foreground mt-1">Recommended retesting to assess protocol efficacy</p>
+              <h3 className="font-display text-lg text-card-foreground">Cronograma de Retestes</h3>
+              <p className="text-xs text-muted-foreground mt-1">Retestes recomendados para avaliar a eficácia do protocolo</p>
             </div>
             <div className="divide-y divide-border">
               {testingSchedule.map((t, i) => (

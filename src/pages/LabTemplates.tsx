@@ -59,7 +59,7 @@ export default function LabTemplates() {
       </div>
 
       <ClinicalDisclaimer
-        context="Os modelos são curados a partir de literatura de medicina funcional e diretrizes clínicas para apoiar a seleção e interpretação dos painéis."
+        context="Modelos curados a partir de literatura de medicina funcional e diretrizes clínicas para apoiar a seleção e interpretação de painéis laboratoriais pelo profissional licenciado."
       />
 
       <div className="flex items-center gap-2 flex-1 max-w-sm bg-card border border-border rounded-lg px-3 py-2">

@@ -90,7 +90,7 @@ export default function ProtocolBuilder() {
       </div>
 
       <ClinicalDisclaimer
-        context="Este protocolo é gerado para apoiar a decisão do profissional. Não diagnostica, trata nem prescreve."
+        context="Este protocolo é uma sugestão baseada em evidência para apoiar a decisão do profissional licenciado. Revise cada item frente ao quadro clínico completo, contraindicações e interações antes de compartilhar com o cliente."
       />
 
       <div className="flex items-center gap-1 bg-muted/50 p-1 rounded-lg w-fit">

@@ -26,7 +26,7 @@ export default function Insights() {
       </div>
 
       <ClinicalDisclaimer
-        context="Os desfechos agregados descrevem padrões observados em dados anonimizados de clientes. São sinais geradores de hipóteses para revisão do profissional, não evidência de eficácia nem base para prescrição."
+        context="Padrões observados em dados anonimizados da sua prática. São sinais correlacionais para geração de hipóteses, não evidência de eficácia nem base para decisões sobre clientes individuais."
       />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

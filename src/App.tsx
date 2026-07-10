@@ -27,9 +27,9 @@ const App = () => (
             <Route path="/clients" element={<Clients />} />
             <Route path="/protocols" element={<Protocols />} />
             <Route path="/protocols/:id" element={<ProtocolBuilder />} />
-            <Route path="/templates" element={<Placeholder title="Lab Templates" description="Evidence-based lab panels and interpretive frameworks" />} />
-            <Route path="/insights" element={<Placeholder title="Insights" description="Clinical outcomes analytics across your practice" />} />
-            <Route path="/settings" element={<Placeholder title="Settings" description="Practice preferences, integrations, and account" />} />
+            <Route path="/templates" element={<LabTemplates />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

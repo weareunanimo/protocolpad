@@ -140,11 +140,11 @@ export default function Landing() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <Link to="/app" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/auth" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Entrar
             </Link>
             <Link
-              to="/app"
+              to="/auth"
               className="flex items-center gap-1.5 px-4 py-2 bg-accent text-accent-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
             >
               Testar grátis <ArrowRight className="w-3.5 h-3.5" />
@@ -168,7 +168,7 @@ export default function Landing() {
               <a href="#planos" onClick={() => setMenuOpen(false)} className="py-2 text-muted-foreground">Planos</a>
               <a href="#depoimentos" onClick={() => setMenuOpen(false)} className="py-2 text-muted-foreground">Depoimentos</a>
               <Link
-                to="/app"
+                to="/auth"
                 className="mt-2 flex items-center justify-center gap-1.5 px-4 py-2.5 bg-accent text-accent-foreground rounded-lg text-sm font-medium"
               >
                 Testar grátis <ArrowRight className="w-3.5 h-3.5" />
@@ -196,7 +196,7 @@ export default function Landing() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Link
-                to="/app"
+                to="/auth"
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
               >
                 Testar 14 dias grátis <ArrowRight className="w-4 h-4" />
@@ -419,7 +419,7 @@ export default function Landing() {
                 </ul>
 
                 <Link
-                  to="/app"
+                  to="/auth"
                   className={`mt-8 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90 ${
                     p.highlight
                       ? "bg-accent text-accent-foreground"
@@ -445,7 +445,7 @@ export default function Landing() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              to="/app"
+              to="/auth"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Começar teste grátis <ArrowRight className="w-4 h-4" />
@@ -478,7 +478,7 @@ export default function Landing() {
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <a href="#recursos" className="hover:text-foreground">Recursos</a>
             <a href="#planos" className="hover:text-foreground">Planos</a>
-            <Link to="/app" className="hover:text-foreground">Entrar</Link>
+            <Link to="/auth" className="hover:text-foreground">Entrar</Link>
             <a href="mailto:contato@protocolpad.app" className="hover:text-foreground">Contato</a>
           </div>
         </div>

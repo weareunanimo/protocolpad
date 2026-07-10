@@ -1,6 +1,7 @@
 import { ArrowLeft, Save, Download, Clock, Pill, Utensils, Activity, FlaskConical, Plus, GripVertical, Trash2 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 interface Supplement {
   id: number;
@@ -90,13 +91,9 @@ export default function ProtocolBuilder() {
       </div>
 
       {/* Disclaimer */}
-      <div className="bg-muted/60 border border-border rounded-lg px-4 py-3">
-        <p className="text-xs text-muted-foreground">
-          <span className="font-semibold">Clinical Decision-Support Tool.</span> This protocol is generated to assist practitioner decision-making. 
-          It does not constitute medical advice, diagnosis, or treatment. All recommendations should be evaluated within the context of the patient's 
-          complete clinical picture by a qualified practitioner.
-        </p>
-      </div>
+      <ClinicalDisclaimer
+        context="This protocol is generated to assist practitioner decision-making. It does not diagnose, treat, or prescribe."
+      />
 
       {/* Tabs */}
       <div className="flex items-center gap-1 bg-muted/50 p-1 rounded-lg w-fit">

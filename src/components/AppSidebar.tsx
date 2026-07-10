@@ -12,12 +12,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard", path: "/" },
-  { icon: Users, label: "Clients", path: "/clients" },
-  { icon: FileText, label: "Protocols", path: "/protocols" },
-  { icon: FlaskConical, label: "Lab Templates", path: "/templates" },
+  { icon: LayoutDashboard, label: "Painel", path: "/" },
+  { icon: Users, label: "Clientes", path: "/clients" },
+  { icon: FileText, label: "Protocolos", path: "/protocols" },
+  { icon: FlaskConical, label: "Modelos de Exames", path: "/templates" },
   { icon: BarChart3, label: "Insights", path: "/insights" },
-  { icon: Settings, label: "Settings", path: "/settings" },
+  { icon: Settings, label: "Configurações", path: "/settings" },
 ];
 
 export default function AppSidebar() {
@@ -75,7 +75,7 @@ export default function AppSidebar() {
       {!collapsed && (
         <div className="px-3 pb-3">
           <p className="text-[10px] leading-tight text-sidebar-foreground/40">
-            Clinical decision-support tool. Not intended to diagnose, treat, or prescribe.
+            Ferramenta de apoio à decisão clínica. Não se destina a diagnosticar, tratar ou prescrever.
           </p>
         </div>
       )}

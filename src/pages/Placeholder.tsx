@@ -17,9 +17,9 @@ export default function Placeholder({ title, description }: PlaceholderProps) {
         <div className="p-4 rounded-full bg-muted mb-4">
           <Construction className="w-6 h-6 text-muted-foreground" />
         </div>
-        <h2 className="text-lg font-display text-card-foreground mb-1">Coming Soon</h2>
+        <h2 className="text-lg font-display text-card-foreground mb-1">Em breve</h2>
         <p className="text-sm text-muted-foreground max-w-md">
-          This section is under active development. Check back shortly.
+          Esta seção está em desenvolvimento ativo. Volte em breve.
         </p>
       </div>
     </div>

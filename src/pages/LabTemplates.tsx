@@ -4,40 +4,40 @@ import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 const templates = [
   {
-    name: "Comprehensive Thyroid Panel",
-    markers: "TSH, Free T3, Free T4, Reverse T3, TPO Ab, TG Ab",
-    useCase: "Suspected hypothyroidism, autoimmune thyroiditis, T4→T3 conversion issues",
-    evidence: "AACE/ATA 2022 guidelines · IFM clinical framework",
+    name: "Painel Tireoidiano Completo",
+    markers: "TSH, T3 Livre, T4 Livre, T3 Reverso, Anti-TPO, Anti-TG",
+    useCase: "Suspeita de hipotireoidismo, tireoidite autoimune, falhas na conversão T4→T3",
+    evidence: "Diretrizes AACE/ATA 2022 · Framework clínico IFM",
   },
   {
-    name: "GI-MAP Stool Analysis",
-    markers: "Pathogens, commensals, opportunists, zonulin, calprotectin, secretory IgA",
-    useCase: "Dysbiosis, SIBO screening, intestinal permeability, chronic GI symptoms",
-    evidence: "Diagnostic Solutions clinical guide · IFM GI module",
+    name: "Análise de Fezes GI-MAP",
+    markers: "Patógenos, comensais, oportunistas, zonulina, calprotectina, IgA secretora",
+    useCase: "Disbiose, rastreio de SIBO, permeabilidade intestinal, sintomas GI crônicos",
+    evidence: "Guia clínico Diagnostic Solutions · Módulo GI do IFM",
   },
   {
-    name: "Cardiometabolic Advanced",
-    markers: "ApoB, Lp(a), fasting insulin, HOMA-IR, hs-CRP, homocysteine, HbA1c",
-    useCase: "Insulin resistance workup, cardiovascular risk stratification beyond standard lipids",
-    evidence: "AHA/ACC 2019 · Cleveland HeartLab interpretive frameworks",
+    name: "Cardiometabólico Avançado",
+    markers: "ApoB, Lp(a), insulina em jejum, HOMA-IR, PCR-us, homocisteína, HbA1c",
+    useCase: "Investigação de resistência à insulina, risco cardiovascular além do perfil lipídico padrão",
+    evidence: "AHA/ACC 2019 · Frameworks interpretativos Cleveland HeartLab",
   },
   {
-    name: "HPA Axis (4-Point Cortisol + DHEA)",
-    markers: "Salivary cortisol x4, DHEA-S, cortisol awakening response",
-    useCase: "Chronic fatigue, burnout presentation, sleep disruption, stress-mediated symptoms",
-    evidence: "Endocrine Society · DUTCH clinical reference",
+    name: "Eixo HPA (Cortisol 4 pontos + DHEA)",
+    markers: "Cortisol salivar x4, DHEA-S, resposta de despertar do cortisol",
+    useCase: "Fadiga crônica, quadro de burnout, distúrbios do sono, sintomas mediados por estresse",
+    evidence: "Endocrine Society · Referência clínica DUTCH",
   },
   {
-    name: "Micronutrient & Methylation",
-    markers: "RBC magnesium, zinc, copper, B12, folate, MTHFR, homocysteine",
-    useCase: "Fatigue, mood, methylation dysfunction, suspected nutrient depletion",
-    evidence: "SpectraCell interpretive guide · IFM nutrition module",
+    name: "Micronutrientes e Metilação",
+    markers: "Magnésio (eritrocitário), zinco, cobre, B12, folato, MTHFR, homocisteína",
+    useCase: "Fadiga, humor, disfunção de metilação, suspeita de depleção nutricional",
+    evidence: "Guia interpretativo SpectraCell · Módulo de nutrição do IFM",
   },
   {
-    name: "Female Hormone Panel (Cycle-Timed)",
-    markers: "Estradiol, progesterone, testosterone, SHBG, FSH, LH (day 19-22)",
-    useCase: "Cycle irregularities, PMS/PMDD, perimenopause, fertility workup",
-    evidence: "ACOG · Precision Analytical DUTCH clinical guide",
+    name: "Painel Hormonal Feminino (por fase do ciclo)",
+    markers: "Estradiol, progesterona, testosterona, SHBG, FSH, LH (dia 19-22)",
+    useCase: "Irregularidades do ciclo, TPM/TDPM, perimenopausa, avaliação de fertilidade",
+    evidence: "ACOG · Guia clínico DUTCH (Precision Analytical)",
   },
 ];
 
@@ -52,21 +52,21 @@ export default function LabTemplates() {
   return (
     <div className="space-y-6 max-w-6xl">
       <div>
-        <h1 className="text-2xl font-display text-foreground">Lab Templates</h1>
+        <h1 className="text-2xl font-display text-foreground">Modelos de Exames</h1>
         <p className="text-sm text-muted-foreground mt-1">
-          Evidence-based lab panels with interpretive frameworks to inform your clinical workup
+          Painéis laboratoriais baseados em evidência com frameworks interpretativos para apoiar sua investigação clínica
         </p>
       </div>
 
       <ClinicalDisclaimer
-        context="Templates are curated from published functional medicine literature and clinical guidelines to assist panel selection and interpretation."
+        context="Os modelos são curados a partir de literatura de medicina funcional e diretrizes clínicas para apoiar a seleção e interpretação dos painéis."
       />
 
       <div className="flex items-center gap-2 flex-1 max-w-sm bg-card border border-border rounded-lg px-3 py-2">
         <Search className="w-4 h-4 text-muted-foreground" />
         <input
           type="text"
-          placeholder="Search templates…"
+          placeholder="Buscar modelos…"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none w-full"
@@ -90,7 +90,7 @@ export default function LabTemplates() {
                   <div className="mt-3 space-y-1.5">
                     <p className="text-xs text-card-foreground">
                       <span className="text-[11px] uppercase tracking-wider font-semibold text-muted-foreground">
-                        Clinical context ·{" "}
+                        Contexto clínico ·{" "}
                       </span>
                       {t.useCase}
                     </p>
@@ -102,7 +102,7 @@ export default function LabTemplates() {
                 </div>
               </div>
               <button className="flex items-center gap-1.5 text-xs text-accent font-medium shrink-0 hover:opacity-80 transition-opacity">
-                Use template
+                Usar modelo
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

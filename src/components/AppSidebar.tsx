@@ -75,7 +75,7 @@ export default function AppSidebar() {
       {!collapsed && (
         <div className="px-3 pb-3">
           <p className="text-[10px] leading-tight text-sidebar-foreground/40">
-            Clinical decision-support tool. Not intended to diagnose, treat, or prescribe.
+            Ferramenta de apoio à decisão clínica. Não se destina a diagnosticar, tratar ou prescrever.
           </p>
         </div>
       )}

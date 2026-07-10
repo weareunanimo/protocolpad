@@ -8,7 +8,9 @@ import Dashboard from "./pages/Dashboard";
 import Clients from "./pages/Clients";
 import Protocols from "./pages/Protocols";
 import ProtocolBuilder from "./pages/ProtocolBuilder";
-import Placeholder from "./pages/Placeholder";
+import LabTemplates from "./pages/LabTemplates";
+import Insights from "./pages/Insights";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

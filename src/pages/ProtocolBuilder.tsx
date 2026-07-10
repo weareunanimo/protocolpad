@@ -1,6 +1,7 @@
 import { ArrowLeft, Save, Download, Clock, Pill, Utensils, Activity, FlaskConical, Plus, GripVertical, Trash2 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
+import ClinicalDisclaimer from "@/components/ClinicalDisclaimer";
 
 interface Supplement {
   id: number;

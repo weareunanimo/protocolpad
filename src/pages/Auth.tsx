@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import logoAsset from "@/assets/protocolpad-logo.png.asset.json";
 
 const emailSchema = z.string().trim().email({ message: "E-mail inválido" }).max(255);
 const passwordSchema = z.string().min(8, { message: "Mínimo de 8 caracteres" }).max(72);
@@ -114,9 +115,7 @@ export default function Auth() {
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
         <Link to="/" className="flex items-center gap-2.5 justify-center mb-8">
-          <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-            <FlaskConical className="w-5 h-5 text-primary-foreground" />
-          </div>
+          <img src={logoAsset.url} alt="Protocol Pad" className="w-10 h-10 object-contain" />
           <span className="font-serif text-xl text-foreground">Protocol Pad</span>
         </Link>
 

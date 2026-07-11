@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import logoAsset from "@/assets/protocolpad-logo.png.asset.json";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Painel", path: "/app" },
@@ -50,9 +51,7 @@ export default function AppSidebar({ mobileOpen = false, onMobileClose }: AppSid
       >
         {/* Logo */}
         <div className="flex items-center gap-2.5 px-4 h-16 border-b border-sidebar-border">
-          <div className="w-8 h-8 rounded-lg bg-sidebar-primary flex items-center justify-center shrink-0">
-            <FlaskConical className="w-4 h-4 text-sidebar-primary-foreground" />
-          </div>
+          <img src={logoAsset.url} alt="Protocol Pad" className="w-8 h-8 object-contain shrink-0" />
           {!collapsed && (
             <span className="font-display text-lg tracking-tight text-sidebar-foreground flex-1">
               Protocol Pad

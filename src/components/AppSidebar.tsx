@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import logoAsset from "@/assets/protocolpad-logo.png.asset.json";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Painel", path: "/app" },

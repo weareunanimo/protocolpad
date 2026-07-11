@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -99,7 +99,7 @@
   }
 
   h1, h2, h3 {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Host Grotesk', sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
   }
@@ -107,13 +107,13 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Host Grotesk', sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
   }
 
   .font-body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Host Grotesk', sans-serif;
   }
 
   .shadow-card {

@@ -126,8 +126,8 @@ export default function Landing() {
       {/* Nav */}
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16">
-          <Link to="/" className="flex items-center gap-2.5">
-            <img src={logoAsset.url} alt="Protocol Pad" className="w-9 h-9 object-contain" />
+          <Link to="/" className="flex items-center gap-0">
+            <img src={logoAsset.url} alt="Protocol Pad" className="w-12 h-12 object-contain" />
             <span className="font-display text-lg tracking-tight">Protocol Pad</span>
           </Link>
 
@@ -465,8 +465,8 @@ export default function Landing() {
       {/* Footer */}
       <footer className="border-t border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div className="flex items-center gap-2.5">
-            <img src={logoAsset.url} alt="Protocol Pad" className="w-8 h-8 object-contain" />
+          <div className="flex items-center gap-0">
+            <img src={logoAsset.url} alt="Protocol Pad" className="w-11 h-11 object-contain" />
             <div>
               <p className="font-display">Protocol Pad</p>
               <p className="text-xs text-muted-foreground">Apoio à decisão clínica para saúde funcional.</p>

@@ -126,9 +126,7 @@ export default function Landing() {
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16">
           <Link to="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <FlaskConical className="w-4 h-4 text-primary-foreground" />
-            </div>
+            <img src={logoAsset.url} alt="Protocol Pad" className="w-9 h-9 object-contain" />
             <span className="font-display text-lg tracking-tight">Protocol Pad</span>
           </Link>
 

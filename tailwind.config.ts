@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["IBM Plex Sans", "system-ui", "sans-serif"],
-        display: ["IBM Plex Sans", "system-ui", "sans-serif"],
+        sans: ["Host Grotesk", "system-ui", "sans-serif"],
+        display: ["Host Grotesk", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -114,9 +114,9 @@ export default function Auth() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
-        <Link to="/" className="flex items-center gap-2.5 justify-center mb-8">
-          <img src={logoAsset.url} alt="Protocol Pad" className="w-10 h-10 object-contain" />
-          <span className="font-serif text-xl text-foreground">Protocol Pad</span>
+        <Link to="/" className="flex items-center gap-0 justify-center mb-8">
+          <img src={logoAsset.url} alt="Protocol Pad" className="w-14 h-14 object-contain" />
+          <span className="font-display text-xl text-foreground">Protocol Pad</span>
         </Link>
 
         <div className="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-sm">

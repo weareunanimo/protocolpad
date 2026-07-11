@@ -94,9 +94,21 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+
 
   h1, h2, h3 {
     font-family: 'Host Grotesk', sans-serif;

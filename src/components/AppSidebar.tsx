@@ -50,8 +50,8 @@ export default function AppSidebar({ mobileOpen = false, onMobileClose }: AppSid
         `}
       >
         {/* Logo */}
-        <div className="flex items-center gap-2.5 px-4 h-16 border-b border-sidebar-border">
-          <img src={logoAsset.url} alt="Protocol Pad" className="w-8 h-8 object-contain shrink-0" />
+        <div className="flex items-center gap-0 px-3 h-16 border-b border-sidebar-border">
+          <img src={logoAsset.url} alt="Protocol Pad" className="w-11 h-11 object-contain shrink-0" />
           {!collapsed && (
             <span className="font-display text-lg tracking-tight text-sidebar-foreground flex-1">
               Protocol Pad

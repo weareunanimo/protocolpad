@@ -466,9 +466,7 @@ export default function Landing() {
       <footer className="border-t border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <FlaskConical className="w-4 h-4 text-primary-foreground" />
-            </div>
+            <img src={logoAsset.url} alt="Protocol Pad" className="w-8 h-8 object-contain" />
             <div>
               <p className="font-display">Protocol Pad</p>
               <p className="text-xs text-muted-foreground">Apoio à decisão clínica para saúde funcional.</p>

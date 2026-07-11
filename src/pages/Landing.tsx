@@ -14,6 +14,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import logoAsset from "@/assets/protocolpad-logo.png.asset.json";
 
 const features = [
   {

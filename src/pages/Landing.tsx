@@ -126,7 +126,14 @@ export default function Landing() {
       {/* Nav */}
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b border-border">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16">
-          <Link to="/" className="flex items-center gap-0">
+          <Link
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="flex items-center gap-0"
+          >
             <img src={logoAsset.url} alt="Protocol Pad" className="w-12 h-12 object-contain" />
             <span className="font-display text-lg tracking-tight">Protocol Pad</span>
           </Link>

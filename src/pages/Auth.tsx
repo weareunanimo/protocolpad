@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import logoAsset from "@/assets/protocolpad-logo.png.asset.json";
 
 const emailSchema = z.string().trim().email({ message: "E-mail inválido" }).max(255);
 const passwordSchema = z.string().min(8, { message: "Mínimo de 8 caracteres" }).max(72);

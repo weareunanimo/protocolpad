@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const protocols = [
-  { id: "1", client: "Sara Mitchell", title: "Protocolo de Restauração Tireoidiana + Intestinal", status: "active", updated: "22 fev", supplements: 8, duration: "12 semanas" },
-  { id: "2", client: "Tiago Kim", title: "Protocolo de Recuperação do Eixo HPA", status: "draft", updated: "21 fev", supplements: 5, duration: "8 semanas" },
-  { id: "3", client: "Emília Roberts", title: "Erradicação de SIBO + Estabilização de Histamina", status: "review", updated: "20 fev", supplements: 11, duration: "16 semanas" },
-  { id: "4", client: "Michel Torres", title: "Protocolo de Reset Metabólico", status: "active", updated: "19 fev", supplements: 6, duration: "10 semanas" },
-  { id: "5", client: "Ava Leung", title: "Suporte à Metilação e Detoxificação", status: "active", updated: "18 fev", supplements: 7, duration: "12 semanas" },
-  { id: "6", client: "David Patel", title: "Protocolo Abrangente para Lyme + Coinfecções", status: "active", updated: "15 fev", supplements: 14, duration: "24 semanas" },
+  { id: "1", client: "Mariana Almeida", title: "Protocolo de Restauração Tireoidiana + Intestinal", status: "active", updated: "22 fev", supplements: 8, duration: "12 semanas" },
+  { id: "2", client: "Thiago Rocha", title: "Protocolo de Recuperação do Eixo HPA", status: "draft", updated: "21 fev", supplements: 5, duration: "8 semanas" },
+  { id: "3", client: "Camila Fernandes", title: "Erradicação de SIBO + Estabilização de Histamina", status: "review", updated: "20 fev", supplements: 11, duration: "16 semanas" },
+  { id: "4", client: "Rafael Cardoso", title: "Protocolo de Reset Metabólico", status: "active", updated: "19 fev", supplements: 6, duration: "10 semanas" },
+  { id: "5", client: "Ana Beatriz Souza", title: "Suporte à Metilação e Detoxificação", status: "active", updated: "18 fev", supplements: 7, duration: "12 semanas" },
+  { id: "6", client: "Lucas Ribeiro", title: "Protocolo Abrangente para Lyme + Coinfecções", status: "active", updated: "15 fev", supplements: 14, duration: "24 semanas" },
 ];
 
 const statusConfig = {

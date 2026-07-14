@@ -2,13 +2,13 @@ import { Search, Plus, Filter, MoreHorizontal } from "lucide-react";
 import { useState } from "react";
 
 const clients = [
-  { id: 1, name: "Sara Mitchell", age: 42, conditions: ["Hipotireoidismo", "Disbiose Intestinal"], lastVisit: "22 fev 2026", protocols: 3, status: "active" },
-  { id: 2, name: "Tiago Kim", age: 38, conditions: ["Fadiga Adrenal", "Disfunção do Eixo HPA"], lastVisit: "21 fev 2026", protocols: 2, status: "active" },
-  { id: 3, name: "Emília Roberts", age: 35, conditions: ["SIBO", "Intolerância à Histamina"], lastVisit: "20 fev 2026", protocols: 4, status: "active" },
-  { id: 4, name: "Michel Torres", age: 51, conditions: ["Resistência à Insulina", "Síndrome Metabólica"], lastVisit: "19 fev 2026", protocols: 1, status: "new" },
-  { id: 5, name: "Ava Leung", age: 29, conditions: ["SNPs de Metilação", "Suporte à Detox"], lastVisit: "18 fev 2026", protocols: 2, status: "active" },
-  { id: 6, name: "David Patel", age: 45, conditions: ["Fadiga Crônica", "Coinfecções por Lyme"], lastVisit: "15 fev 2026", protocols: 5, status: "active" },
-  { id: 7, name: "Olívia Chen", age: 33, conditions: ["SOP", "Desregulação Glicêmica"], lastVisit: "10 fev 2026", protocols: 2, status: "inactive" },
+  { id: 1, name: "Mariana Almeida", age: 42, conditions: ["Hipotireoidismo", "Disbiose Intestinal"], lastVisit: "22 fev 2026", protocols: 3, status: "active" },
+  { id: 2, name: "Thiago Rocha", age: 38, conditions: ["Fadiga Adrenal", "Disfunção do Eixo HPA"], lastVisit: "21 fev 2026", protocols: 2, status: "active" },
+  { id: 3, name: "Camila Fernandes", age: 35, conditions: ["SIBO", "Intolerância à Histamina"], lastVisit: "20 fev 2026", protocols: 4, status: "active" },
+  { id: 4, name: "Rafael Cardoso", age: 51, conditions: ["Resistência à Insulina", "Síndrome Metabólica"], lastVisit: "19 fev 2026", protocols: 1, status: "new" },
+  { id: 5, name: "Ana Beatriz Souza", age: 29, conditions: ["SNPs de Metilação", "Suporte à Detox"], lastVisit: "18 fev 2026", protocols: 2, status: "active" },
+  { id: 6, name: "Lucas Ribeiro", age: 45, conditions: ["Fadiga Crônica", "Coinfecções por Lyme"], lastVisit: "15 fev 2026", protocols: 5, status: "active" },
+  { id: 7, name: "Juliana Oliveira", age: 33, conditions: ["SOP", "Desregulação Glicêmica"], lastVisit: "10 fev 2026", protocols: 2, status: "inactive" },
 ];
 
 const statusLabels: Record<string, string> = {

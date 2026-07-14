@@ -3,11 +3,11 @@ import MetricCard from "@/components/MetricCard";
 import { Link } from "react-router-dom";
 
 const recentProtocols = [
-  { id: 1, client: "Sara M.", condition: "Hipotireoidismo + Disbiose Intestinal", status: "active", date: "22 fev" },
-  { id: 2, client: "Tiago K.", condition: "Fadiga Adrenal, Eixo HPA", status: "draft", date: "21 fev" },
-  { id: 3, client: "Emília R.", condition: "SIBO + Intolerância à Histamina", status: "review", date: "20 fev" },
-  { id: 4, client: "Michel T.", condition: "Resistência à Insulina", status: "active", date: "19 fev" },
-  { id: 5, client: "Ava L.", condition: "SNPs de Metilação, Suporte à Detox", status: "active", date: "18 fev" },
+  { id: 1, client: "Mariana A.", condition: "Hipotireoidismo + Disbiose Intestinal", status: "active", date: "22 fev" },
+  { id: 2, client: "Thiago R.", condition: "Fadiga Adrenal, Eixo HPA", status: "draft", date: "21 fev" },
+  { id: 3, client: "Camila F.", condition: "SIBO + Intolerância à Histamina", status: "review", date: "20 fev" },
+  { id: 4, client: "Rafael C.", condition: "Resistência à Insulina", status: "active", date: "19 fev" },
+  { id: 5, client: "Ana Beatriz S.", condition: "SNPs de Metilação, Suporte à Detox", status: "active", date: "18 fev" },
 ];
 
 const statusConfig = {
@@ -17,9 +17,9 @@ const statusConfig = {
 };
 
 const upcomingFollowUps = [
-  { client: "Sara M.", type: "Reteste: Painel Tireoidiano + GI-MAP", daysUntil: 3 },
-  { client: "Michel T.", type: "Insulina em Jejum + HbA1c", daysUntil: 7 },
-  { client: "Ava L.", type: "Painel OAT + Metilação", daysUntil: 12 },
+  { client: "Mariana A.", type: "Reteste: Painel Tireoidiano + GI-MAP", daysUntil: 3 },
+  { client: "Rafael C.", type: "Insulina em Jejum + HbA1c", daysUntil: 7 },
+  { client: "Ana Beatriz S.", type: "Painel OAT + Metilação", daysUntil: 12 },
 ];
 
 export default function Dashboard() {
